@@ -1,0 +1,42 @@
+<!--
+ View - Indicador
+-->
+<div ng-controller="IndicadorController">
+    <!-- Indicador 5 - Totalizadores Gerais da Instituição -->
+    <div class="row tile_count">
+        <!-- Total de Alunos -->
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Total de Alunos</span>
+            <div class="count" style="color: #3F51B5;">{{indicadorTotalAlunos}}</div>
+        </div>
+        <!-- Total de Orientadores -->
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Total de Orientadores</span>
+            <div class="count" style="color: #2196F3;">{{indicadorTotalOrientadores}}</div>
+        </div>
+        <!-- Total de Cursos -->
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Total de Cursos</span>
+            <div class="count" style="color: #4CAF50;">{{indicadorTotalCursos}}</div>
+        </div>
+        <!-- Total de Publicações -->
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Total de Publicações</span>
+            <div class="count" style="color: #FFC107;">{{indicadorTotalPublicacoes}}</div>
+        </div>
+    </div>
+    <!-- /top tiles -->
+
+    <div class="row">
+	
+		<div ng-include="alunosPorPublicacao"></div>
+		
+		<div ng-include="alunosAtivosInativos"></div>
+		
+		<div ng-include="orientadoresPorPublicacao"></div>
+		
+		<div ng-include="orientadoresAtivosInativos"></div>		
+
+    </div>
+
+</div>
